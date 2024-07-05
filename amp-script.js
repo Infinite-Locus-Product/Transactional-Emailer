@@ -1,3 +1,3 @@
 document.getElementById('myButton').addEventListener('click', () => {
-  alert('Button Clicked!');
+  document.getElementById('clickedText').textContent = "Clicked!!";
 });
