@@ -1,0 +1,120 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .timeline-app {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .download-app {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-container" style="padding: 40px">
+    <amp-img
+      src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/supertails_logo_424e6409-c0da-4681-8a84-b4e0751e0ef5.png?v=1718545935"
+      alt="Supertails Logo" class="logo" width="145" height="45">
+    </amp-img>
+    <table style="width: 100%; border-collapse: collapse; border: none">
+      <tr>
+        <td style="padding: 10px; width: 40%; border: none">
+          <h1 class="email-header-title" id="email-header-title" style="font-size: 60px; margin: 0">
+            Woohoo!
+          </h1>
+          <p class="email-header-subtitle" id="email-header-subtitle" style="font-size: 30px; margin: 0">
+            Your Order is Officially Confirmed
+          </p>
+          <p class="email-header-subtitle-1" id="email-header-subtitle-1">
+            {{ Linked["Get Order Details "].line_items | default: "LineItems" }}
+            Your pet’s goodies are zooming their way to you. Get ready for
+            some tail-wagging excitement
+          </p>
+        </td>
+        <td style="padding: 10px; width: 20%; vertical-align: top; border: none">
+          <amp-img
+            src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/pet_care_d8357df5-583f-48f1-b7cb-3a3a19d3bbb6.png?v=1718547320"
+            alt="img-with-dog" width="185" height="145">
+          </amp-img>
+        </td>
+      </tr>
+    </table>
+    <div>
+      <amp-img class="timeline-app" id="timeline-app"
+        src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/timeline_email.png?v=1715161711" width="600"
+        height="400" alt="Timeline Image">
+      </amp-img>
+    </div>
+    <div>
+      <amp-img class="download-app" id="download-app" width="545" height="125"
+        src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/download_app.png?v=1715161470">
+      </amp-img>
+    </div>
+  </div>
+  <amp-list width="auto" height="500" layout="fixed-height" src="test.json">
+    <template type="amp-mustache">
+      <div class="order">
+        <div class="order-header">
+          <p class="static">Order details</p>
+          <p class="order-id">ID: <span class='id-value'>{{id}}</span></p>
+        </div>
+        <!-- <table>
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>QTY</th>
+              <th>COST</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#items}}
+            <tr class="item-row">
+              <td>{{product}}</td>
+              <td>{{quantity}}</td>
+              <td>{{cost}}</td>
+            </tr>
+            {{/items}}
+            <tr>
+              <td colspan="2" style="text-align: left; padding-top: 10px; font-size: 20px; font-weight: bold">
+                <p>Delivery by today 1PM</p>
+                <hr style="text-align: left">
+              </td>
+              <td><amp-img src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/ndd_icon_b834354d-88b8-4448-bb29-9c8e09be0be0.png?v=1718548477" width="125" height="50" layout="responsive" alt="Delivery Icon"></amp-img></td>
+            </tr>
+          </tbody>
+        </table> -->
+      </div>
+    </template>
+  </amp-list>
+</body>
+
+</html>

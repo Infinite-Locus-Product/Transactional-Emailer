@@ -1,0 +1,23 @@
+<!doctype html>
+<html ⚡4email data-css-strict>
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+</head>
+
+<body>
+  <amp-state id="buttonState">
+    <script type="application/json"> { "clicked": false } </script>
+  </amp-state>
+  <button on="tap:AMP.setState({buttonState: {clicked: true}})">Click Me</button>
+  <div [text]="buttonState.clicked ? 'Button Clicked!' : ''"></div>
+</body>
+
+</html>

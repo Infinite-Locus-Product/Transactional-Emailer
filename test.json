@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": 19784289,
+      "quantity": 2,
+      "items": [
+        { "product": "Product A", "quantity": 1, "cost": 20 },
+        { "product": "Product B", "quantity": 1, "cost": 20 }
+      ]
+    },
+    {
+      "id": 26482734,
+      "quantity": 1,
+      "items": [
+        { "product": "Product C", "quantity": 1, "cost": 20 },
+        { "product": "Product C", "quantity": 1, "cost": 20 },
+        { "product": "Product C", "quantity": 1, "cost": 20 }
+      ]
+    }
+  ]
+}

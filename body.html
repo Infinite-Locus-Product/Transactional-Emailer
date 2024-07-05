@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html ⚡4email data-css-strict>
+
+<head>
+  <meta charset="utf-8" />
+
+  <style amp4email-boilerplate>
+    /* .email-header-text{
+padding: 10px;
+} */
+    .download-app {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .message,
+    .order-info {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .delivery-details {
+      border-radius: 10px;
+      /* max-width: 270px; */
+      border: 1px solid #d1d1d1;
+      padding: 20px;
+
+      gap: 50%;
+      margin-bottom: 30px;
+    }
+
+    .order-info p {
+      margin: 10px 0;
+    }
+
+    .actions {
+      background-color: #4caf50;
+      padding: 20px;
+    }
+
+    .view-order {
+      background-color: #ffffff;
+      color: #4caf50;
+      border: 2px solid #ffffff;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: calc(100% - 40px);
+      margin: auto;
+    }
+
+    .or-divider {
+      color: #ffffff;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .order-payment {
+      padding: 15px 15px;
+      border-radius: 10px;
+      align-self: center;
+      background-color: #ececec;
+      height: fit-content;
+      width: 95%;
+      margin-bottom: 30px;
+    }
+
+    .order {
+      border-radius: 10px;
+      background-color: white;
+      height: fit-content;
+      padding: 10px 10px 10px 10px;
+      /* border-bottom: 10px solid #ececec; */
+      /* width: 100%; */
+    }
+
+    .order:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .order-details {
+      width: 100%;
+    }
+
+    .static {
+      text-align: left;
+      margin: 0;
+      font-family: "Gotham Rounded";
+      font-size: 2rem;
+    }
+
+    .order-id {
+      text-align: left;
+      margin: 0;
+      font-family: "Gotham Rounded";
+      background-color: #daff68;
+      width: fit-content;
+      font-size: 2rem;
+    }
+
+    .id-value {
+      font-weight: bolder;
+    }
+
+    .payment-details {
+      height: fit-content;
+      background-color: white;
+      border-radius: 10px;
+      padding: 37px;
+    }
+
+    .price-static {
+      font-family: "Gotham Rounded";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 35.93px;
+      letter-spacing: 0.1890985369682312px;
+      text-align: left;
+      margin: 0;
+    }
+
+    .payment-details {
+      border-bottom: 1px solid #948f8f;
+    }
+
+    .payment-details-header {
+      font-family: "Gotham Rounded";
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 35.93px;
+      margin: 0;
+      letter-spacing: 0.1890985369682312px;
+      text-align: left;
+      width: 90%;
+    }
+
+    .save-text {
+      font-family: Gotham Rounded;
+      font-size: 15px;
+      font-weight: 325;
+      line-height: 35.93px;
+      letter-spacing: 0.1890985369682312px;
+      text-align: left;
+      margin: 0;
+    }
+
+    .pharmacy-banner {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .trust-market-heading {
+      font-family: "Gotham Rounded";
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .contact-us-btn {
+      font-family: "Gotham Rounded";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      background-color: #ff6914;
+      height: 40px;
+      width: 140px;
+      color: white;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .contact-return-title {
+      font-family: "Gotham Rounded";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .contact-return-text {
+      font-family: "Gotham Rounded";
+      font-size: 10px;
+      font-weight: 325;
+      line-height: 12px;
+      text-align: center;
+    }
+
+    .recommendation-title {
+      font-family: "Gotham Rounded";
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .custom-cell {
+      position: relative;
+      width: calc(33.33% - 10px);
+      /* Adjusted width for 3 cells per row with margins */
+      aspect-ratio: 1;
+      border-radius: 10px;
+      background-color: white;
+      margin: 5px;
+      float: left;
+      /* Floating left to create the inline-block effect */
+    }
+
+    .recommendations-sub {
+      background-color: #ececec;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .row {
+      clear: both;
+      overflow: hidden;
+    }
+
+    .custom-label {
+      top: 0;
+      background-color: #daff68;
+      position: absolute;
+      height: 22px;
+      width: fit-content;
+    }
+
+    .label-text {
+      margin: 0;
+      font-family: Gotham Rounded;
+      font-size: 12.95px;
+      text-align: left;
+    }
+
+    .recommendation-row {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .recommendation-cell {
+      height: 191.98px;
+      width: 302.76px;
+      border-radius: 10px;
+    }
+
+    .recommendation-cell-img {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    .label {
+      position: relative;
+      height: 22px;
+      background-color: #daff68;
+    }
+
+    .label-marker {
+      right: 53px;
+      height: 4px;
+      width: 11.5px;
+      position: relative;
+      top: -8px;
+    }
+
+    .emailer-footer {
+      padding: 30px;
+      align-items: center;
+    }
+
+    .footer-link {
+      font-family: "Gotham Rounded";
+      font-size: 1.5rem;
+      text-decoration: none;
+      list-style: none;
+      text-align: left;
+      font-weight: bolder;
+      color: black;
+    }
+
+    #trust-marker {
+      width: 100%;
+      align-self: center;
+      margin-bottom: 30px;
+    }
+
+    .delivery-logo {
+      width: 100px;
+    }
+
+    #delivery-status {
+      font-size: 41.28px;
+      font-weight: 400;
+    }
+
+    #delivery-time {
+      font-size: 30px;
+    }
+
+    .rating {
+      width: 96%;
+      background-color: #ececec;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      padding: 30px 20px;
+    }
+
+    .rating-info {
+      font-family: Gotham Rounded;
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    .circles {
+      margin-top: 25px;
+    }
+
+    .circle {
+      padding: 20px;
+      border-radius: 100%;
+      text-decoration: none;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      /* Ensure table spans full width of its container */
+      border-collapse: collapse;
+      /* Remove default spacing between table cells */
+      /* border-bottom: 2px solid #ececec; */
+    }
+
+    th,
+    td {
+      padding: 8px;
+      /* Add padding for better readability */
+      text-align: left;
+      /* Align cell content to the left */
+    }
+
+    /* Set width for the first column */
+    th:first-child,
+    td:first-child {
+      width: 40%;
+      /* Set first column width to 40% */
+    }
+
+    /* Distribute remaining columns equally */
+    th:not(:first-child),
+    td:not(:first-child) {
+      width: calc((100% - 40%) / 2);
+      /* Calculate equal width for remaining columns */
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (screen.width > 768) {
+        document.getElementById("download-app").style.display = "none";
+      }
+      const orders = [
+        {
+          id: 19784289,
+          quantity: 2,
+          items: [
+            { product: "Product A", quantity: 1, cost: 20 },
+            { product: "Product B", quantity: 1, cost: 20 },
+          ],
+        },
+        {
+          id: 26482734,
+          quantity: 1,
+          items: [
+            { product: "Product C", quantity: 1, cost: 20 },
+            { product: "Product C", quantity: 1, cost: 20 },
+            { product: "Product C", quantity: 1, cost: 20 },
+          ],
+        },
+      ];
+      // Call the function with the initial dat
+      function renderTable(order) {
+        let tableHTML = "<table>";
+        tableHTML +=
+          "<thead><tr><th>Items</th><th>QTY</th><th>COST</th></tr></thead>";
+        tableHTML += "<tbody>";
+        order.items.forEach((item) => {
+          tableHTML += `<tr class="item-row">
+<td style="border-bottom: 1px solid #948F8F;">${item.product}</td>
+<td style="border-bottom: 1px solid #948F8F">${item.quantity}</td>
+<td style="border-bottom: 1px solid #948F8F">${item.cost}</td>
+</tr>`;
+        });
+        tableHTML += `<tr>
+<td colspan="3" style="text-align: left; padding-top: 10px; font-size: 20px; font-weight: bold">
+<p>Delivery by today 1PM</p>
+<hr style="text-align: left">
+
+</td>
+<td><img src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/ndd_icon_b834354d-88b8-4448-bb29-9c8e09be0be0.png?v=1718548477" alt="Delivery Icon" style="vertical-align: middle; margin-left: 10px; max-width: 125px;"></td>
+</tr>`;
+        tableHTML += "</tbody></table>";
+        return tableHTML;
+      }
+
+      function renderOrders() {
+        const orderDetailsDiv = document.getElementById("order-details");
+        orderDetailsDiv.innerHTML = "";
+        orders.forEach((order) => {
+          const orderHTML = `
+<div class="order">
+<div class="order-header">
+<p class="static">Order details</p>
+<p class="order-id">ID: <span class='id-value'>${order.id
+            }</span></p>
+</div>
+${renderTable(order)} 
+</div>
+`;
+          orderDetailsDiv.innerHTML += orderHTML;
+        });
+      }
+      function renderTrustMarkers(orderType) {
+        const trustMarkerImg = document.getElementById("trust-marker");
+        if (orderType === "pharmacy") {
+          trustMarkerImg.src =
+            "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/pharmacy_product_trust_marker.png?v=1715334457";
+        } else {
+          // Render non-pharmacy trust marker
+          trustMarkerImg.src =
+            "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/non_food_trust_markers.png?v=1715334397";
+        }
+      }
+      renderOrders();
+      renderTrustMarkers("pharmacy");
+    });
+  </script>
+</head>
+
+<body>
+  <div class="email-container" style="padding: 40px">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/supertails_logo_424e6409-c0da-4681-8a84-b4e0751e0ef5.png?v=1718545935"
+      alt="Supertails Logo" class="logo" id="logo" style="max-width: 145px" />
+    <table style="width: 100%; border-collapse: collapse; border: none">
+      <tr>
+        <td style="padding: 10px; width: 40%; border: none">
+          <h1 class="email-header-title" id="email-header-title" style="font-size: 60px; margin: 0">
+            Woohoo!
+          </h1>
+          <p class="email-header-subtitle" id="email-header-subtitle" style="font-size: 30px; margin: 0">
+            Your Order is Officially Confirmed
+          </p>
+          <p class="email-header-subtitle-1" id="email-header-subtitle-1">
+            {{ Linked["Get Order Details "].line_items | default: "LineItems" }}
+            Your pet’s goodies are zooming their way to you. Get ready for
+            some tail-wagging excitement
+          </p>
+        </td>
+        <td style="padding: 10px; width: 20%; vertical-align: top; border: none">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/pet_care_d8357df5-583f-48f1-b7cb-3a3a19d3bbb6.png?v=1718547320"
+            style="max-width: 185px" />
+        </td>
+      </tr>
+    </table>
+    <div>
+      <img class="timeline-app" style="max-width: 100%; margin-bottom: 30px" id="timeline-app"
+        src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/timeline_email.png?v=1715161711" />
+    </div>
+    <div>
+      <img class="download-app" id="download-app"
+        src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/download_app.png?v=1715161470" />
+    </div>
+    <div class="order-payment" id="order-payment">
+      <div class="order-details" id="order-details"></div>
+      <br />
+      <table style="
+width: 100%;
+background-color: white;
+border-radius: 10px;
+padding: 37px;
+border-collapse: separate;
+border-spacing: 0 15px;
+">
+        <tr>
+          <td colspan="2" style="
+font-family: 'Gotham Rounded';
+font-size: 2rem;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+padding: 0;
+margin: 0;
+">
+            Payment Details
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 0">
+            <hr style="
+color: #948f8f;
+width: 100%;
+text-align: left;
+margin-left: 0;
+border: none;
+border-bottom: 1px solid #948f8f;
+" />
+          </td>
+        </tr>
+        <tr>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+padding: 0;
+">
+            <b>Price</b>
+          </td>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: right;
+padding: 0;
+" id="price">
+            <b>30</b>
+          </td>
+        </tr>
+        <tr>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+padding: 0;
+">
+            <b>Discount</b>
+          </td>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: right;
+padding: 0;
+" id="discount">
+            <b>100</b>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 0">
+            <hr style="
+color: #948f8f;
+width: 100%;
+text-align: left;
+margin-left: 0;
+border: none;
+border-bottom: 1px solid #948f8f;
+" />
+          </td>
+        </tr>
+        <tr>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+padding: 0;
+">
+            <b>Discounted price</b>
+          </td>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: right;
+padding: 0;
+" id="discounted">
+            <b>30</b>
+          </td>
+        </tr>
+        <tr>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+padding: 0;
+">
+            <b>Net paid</b>
+          </td>
+          <td style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: right;
+padding: 0;
+" id="net-price">
+            <b>100</b>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 0">
+            <p style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+margin: 0;
+">
+              You have saved <span style="color: #ff6914">$1298</span> on this
+              order
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 0">
+            <hr style="
+color: #948f8f;
+width: 100%;
+text-align: left;
+margin-left: 0;
+border: none;
+border-bottom: 1px solid #948f8f;
+" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="
+font-family: 'Gotham Rounded';
+font-size: 15px;
+font-weight: 400;
+line-height: 35.93px;
+letter-spacing: 0.1890985369682312px;
+text-align: left;
+padding: 0;
+">
+            <b>Your order is
+              <span id="payment-type">cash on delivery</span></b>
+            <img alt="payment-type-image"
+              src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Group_633032_f15bbf3a-cbfd-46f6-9c86-b541343d31b8.png?v=1716451543"
+              style="max-width: 100px; height: auto" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="pharmacy-banner" id="pharmacy-banner">
+      <img class="pharmacy-banner-img" style="width: 100%"
+        src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/pharmacy_banner.png?v=1715323983" />
+    </div>
+    <p class="trust-market-heading">
+      At Supertails, we're dedicated to providing top-notch care for your pet
+    </p>
+    <img id="trust-marker" />
+    <table style="
+width: 100%;
+border-collapse: separate;
+border-spacing: 20px;
+margin-top: 20px;
+">
+      <tr>
+        <td style="
+width: 50%;
+padding: 10px;
+border: 1px solid #d1d1d1;
+border-radius: 20px;
+vertical-align: top;
+text-align: center;
+background-color: #fff;
+">
+          <img src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/return_package.png?v=1715335063"
+            alt="Return and Exchange" style="width: 100%; max-width: 70px; height: auto" />
+          <p style="
+font-family: 'Gotham Rounded';
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+text-align: center;
+">
+            Return and Exchange Policies
+          </p>
+          <p style="
+font-family: 'Gotham Rounded';
+font-size: 10px;
+font-weight: 325;
+line-height: 12px;
+text-align: center;
+">
+            Your pet's satisfaction is our priority. If there are any issues with
+            your order, please refer to our return and exchange policies
+          </p>
+          <button style="
+font-family: 'Gotham Rounded';
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+background-color: #ff6914;
+height: 40px;
+width: 140px;
+color: white;
+border-radius: 5px;
+border: none;
+">
+            Click Here
+          </button>
+        </td>
+        <td style="
+width: 50%;
+padding: 10px;
+border: 1px solid #d1d1d1;
+border-radius: 20px;
+vertical-align: top;
+text-align: center;
+background-color: #fff;
+">
+          <img src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/contact-us.png?v=1715335190"
+            alt="Customer Support" style="width: 100%; max-width: 70px; height: auto" />
+          <p style="
+font-family: 'Gotham Rounded';
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+text-align: center;
+">
+            Customer Support
+          </p>
+          <p style="
+font-family: 'Gotham Rounded';
+font-size: 10px;
+font-weight: 325;
+line-height: 12px;
+text-align: center;
+">
+            Questions about your order or need assistance? Reach out to our
+            pet-loving customer support team anytime
+          </p>
+          <button style="
+font-family: 'Gotham Rounded';
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+background-color: #ff6914;
+height: 40px;
+width: 140px;
+color: white;
+border-radius: 5px;
+border: none;
+">
+            Contact Us
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <div class="recommendations">
+      <p class="recommendation-title" style="
+font-family: 'Gotham Rounded', sans-serif;
+font-size: 24px;
+text-align: center;
+margin-bottom: 20px;
+">
+        Your Pet Might Like These Too
+      </p>
+      <table style="
+margin: 0 auto;
+background-color: #ececec;
+padding: 10px;
+border-radius: 10px;
+width: 85%;
+table-layout: fixed;
+">
+        <tr>
+          <td style="height: 191.98px; width: 33.33%; padding: 5px">
+            <img style="
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+" src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/dog_food_3f36759f-abe5-4251-9ef3-ed33f8c38b66.png?v=1715578202" />
+          </td>
+          <td style="height: 191.98px; width: 33.33%; padding: 5px">
+            <img style="
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+" src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/cat_food_5f4df82a-b748-4ae0-a522-b61cd0f903fa.png?v=1715585098" />
+          </td>
+          <td style="height: 191.98px; width: 33.33%; padding: 5px">
+            <img style="
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+" src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Screenshot_2024-05-23_at_1.24.55_PM.png?v=1716451577" />
+          </td>
+        </tr>
+        <tr>
+          <td style="height: 191.98px; width: 33.33%; padding: 5px">
+            <img style="
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+" src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/cat_toys_30742384-43f5-4383-954f-401fa872ad77.png?v=1715626979" />
+          </td>
+          <td style="height: 191.98px; width: 33.33%; padding: 5px">
+            <img style="
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+" src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/dog_accesories_d7890308-a2ad-460e-8b59-cb2a7b9ce27a.png?v=1715626979" />
+          </td>
+          <td style="height: 191.98px; width: 33.33%; padding: 5px">
+            <img style="
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+" src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/vet_consultations_6a7aa7aa-85f4-4dbc-a590-51e25e5b6f85.png?v=1715627096" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <footer>
+      <table style="width: 100%; padding: 30px">
+        <tr>
+          <td style="width: 50%; text-align: left">
+            <a href="https://supertails.com/" style="
+font-family: 'Gotham Rounded';
+font-size: 1.5rem;
+text-decoration: none;
+list-style: none;
+font-weight: bolder;
+color: black;
+">www.supertails.com</a>
+          </td>
+          <td style="width: 50%; text-align: right">
+            <table style="width: auto; display: inline-table">
+              <tr>
+                <td style="width: 0">
+                  <img style="height: 35px; width: 35px"
+                    src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/youtube_icon_82f907ca-9fea-49b5-8761-3e405a5d0a4c.png?v=1715660638" />
+                </td>
+                <td style="width: 0">
+                  <img style="height: 35px; width: 35px"
+                    src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/instagram_icon_4bf26589-2544-4862-bf58-75b4370fc570.png?v=1715660638" />
+                </td>
+                <td style="width: 0">
+                  <img style="height: 35px; width: 35px"
+                    src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/facebook_icon_d4e6b992-dff1-46c5-90e4-1122f3c51b79.png?v=1715660638" />
+                </td>
+                <td style="width: 0">
+                  <img style="height: 35px; width: 35px"
+                    src="https://cdn.shopify.com/s/files/1/0565/8021/0861/files/linkedin_icon_12622cc0-ccaa-4fc5-b826-c979a42477ce.png?v=1715660639" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </footer>
+  </div>
+</body>
+
+</html>
